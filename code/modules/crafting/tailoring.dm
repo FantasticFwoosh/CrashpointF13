@@ -46,7 +46,6 @@
 	result = /obj/item/clothing/suit/armor/f13/leatherarmor
 	reqs = list(/obj/item/stack/sheet/leather = 3,
 				/obj/item/stack/sheet/durathread = 2)
-	tools = list(TOOL_WORKBENCH)
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_CLOTHING
@@ -55,9 +54,7 @@
 	name = "reinforced leather armor"
 	result = /obj/item/clothing/suit/armor/f13/leatherarmor/reinforced
 	reqs = list(/obj/item/clothing/suit/armor/f13/leatherarmor = 1,
-				/obj/item/stack/sheet/animalhide/geckohide = 3
-	)
-	tools = list(TOOL_WORKBENCH)
+				/obj/item/stack/sheet/animalhide/geckohide = 3)
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_CLOTHING
@@ -67,7 +64,6 @@
 	result = /obj/item/clothing/suit/armor/f13/leather_jacket
 	reqs = list(/obj/item/stack/sheet/animalhide/brahmin = 2,
 				/obj/item/stack/sheet/durathread = 1)
-	tools = list(TOOL_WORKBENCH)
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_CLOTHING
@@ -79,7 +75,6 @@
 				/obj/item/stack/sheet/animalhide/brahmin = 1,
 				/obj/item/stack/sheet/animalhide/geckohide = 1,
 				/obj/item/stack/sheet/leather = 1)
-	tools = list(TOOL_WORKBENCH)
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_CLOTHING
@@ -146,7 +141,6 @@
 	result = /obj/item/storage/belt/bandolier
 	reqs = list(/obj/item/stack/sheet/hay = 3,
 				/obj/item/stack/sheet/leather = 4)
-	tools = list(TOOL_WORKBENCH)
 	time = 40
 	category = CAT_CLOTHING
 	subcategory = CAT_BELTS
@@ -156,7 +150,6 @@
 	result = /obj/item/storage/belt
 	reqs = list(/obj/item/stack/sheet/hay = 3,
 				/obj/item/stack/sheet/leather = 3)
-	tools = list(TOOL_WORKBENCH)
 	time = 15
 	category = CAT_CLOTHING
 	subcategory = CAT_BELTS
@@ -164,9 +157,9 @@
 /datum/crafting_recipe/chestrig
 	name = "chest rig"
 	result = /obj/item/storage/belt/military
-	tools = list(TOOL_AWORKBENCH)
 	reqs = list(/obj/item/stack/sheet/plastic = 2,
 				/obj/item/stack/sheet/leather = 3)
+	tools = list(TOOL_AWORKBENCH)
 	time = 30
 	category = CAT_CLOTHING
 	subcategory = CAT_BELTS
@@ -186,7 +179,6 @@
 	result = /obj/item/storage/belt/holster
 	reqs = list(/obj/item/stack/sheet/leather = 2,
 				/obj/item/stack/sheet/hay = 3)
-	tools = list(TOOL_WORKBENCH)
 	time = 15
 	category = CAT_CLOTHING
 	subcategory = CAT_BELTS
@@ -196,7 +188,6 @@
 	result = /obj/item/clothing/under/f13/settler
 	reqs = list(/obj/item/stack/sheet/leather = 1,
 				/obj/item/stack/sheet/cloth = 3)
-	tools = list(TOOL_WORKBENCH)
 	time = 15
 	category = CAT_CLOTHING
 	subcategory = CAT_WASTELAND
@@ -206,7 +197,6 @@
 	result = /obj/item/clothing/under/f13/merchant
 	reqs = list(/obj/item/stack/sheet/hay = 2,
 				/obj/item/stack/sheet/cloth = 3)
-	tools = list(TOOL_WORKBENCH)
 	time = 15
 	category = CAT_CLOTHING
 	subcategory = CAT_WASTELAND
@@ -216,7 +206,6 @@
 	result = /obj/item/clothing/under/f13/merca
 	reqs = list(/obj/item/stack/sheet/hay = 2,
 				/obj/item/stack/sheet/cloth = 3)
-	tools = list(TOOL_WORKBENCH)
 	time = 15
 	category = CAT_CLOTHING
 	subcategory = CAT_WASTELAND
@@ -226,7 +215,6 @@
 	result = /obj/item/clothing/head/f13/cowboy
 	reqs = list(/obj/item/stack/sheet/leather = 2,
 				/obj/item/stack/sheet/cloth = 1)
-	tools = list(TOOL_WORKBENCH)
 	time = 15
 	category = CAT_CLOTHING
 	subcategory = CAT_WASTELAND
@@ -236,7 +224,6 @@
 	result = /obj/item/clothing/shoes/f13/cowboy
 	reqs = list(/obj/item/stack/sheet/leather = 2,
 				/obj/item/stack/sheet/cloth = 2)
-	tools = list(TOOL_WORKBENCH)
 	time = 15
 	category = CAT_CLOTHING
 	subcategory = CAT_WASTELAND
@@ -246,7 +233,6 @@
 	result = /obj/item/clothing/suit/poncho
 	reqs = list(/obj/item/stack/sheet/cloth = 3,
 				/obj/item/stack/sheet/hay = 2)
-	tools = list(TOOL_WORKBENCH)
 	time = 15
 	category = CAT_CLOTHING
 	subcategory = CAT_WASTELAND
@@ -255,7 +241,6 @@
 	name = "sombrero"
 	result = /obj/item/clothing/head/sombrero
 	reqs = list(/obj/item/stack/sheet/hay = 4)
-	tools = list(TOOL_WORKBENCH)
 	time = 15
 	category = CAT_CLOTHING
 	subcategory = CAT_WASTELAND
@@ -264,7 +249,6 @@
 	name = "tribal outfit"
 	result = /obj/item/clothing/under/f13/tribal
 	reqs = list(/obj/item/stack/sheet/cloth = 3)
-	tools = list(TOOL_WORKBENCH)
 	time = 10
 	category = CAT_CLOTHING
 	subcategory = CAT_WASTELAND
@@ -273,7 +257,6 @@
 	name = "desert facewrap"
 	result = /obj/item/clothing/mask/facewrap
 	reqs = list(/obj/item/stack/sheet/cloth = 2)
-	tools = list(TOOL_WORKBENCH)
 	time = 10
 	category = CAT_CLOTHING
 	subcategory = CAT_WASTELAND
@@ -282,7 +265,6 @@
 	name = "brown cloak"
 	result = /obj/item/clothing/suit/hooded/cloak/desert
 	reqs = list(/obj/item/stack/sheet/leather = 3)
-	tools = list(TOOL_WORKBENCH)
 	time = 25
 	category = CAT_CLOTHING
 	subcategory = CAT_WASTELAND
