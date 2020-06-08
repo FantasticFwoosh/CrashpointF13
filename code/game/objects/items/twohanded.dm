@@ -95,7 +95,6 @@
 	unwield(user)
 
 /obj/item/twohanded/update_icon()
-	return
 
 /obj/item/twohanded/attack_self(mob/user)
 	. = ..()
@@ -258,7 +257,6 @@
 			var/obj/structure/grille/G = A
 			G.take_damage(40, BRUTE, "melee", 0)
 
-
 /*
  * Double-Bladed Energy Swords - Cheridan
  */
@@ -310,7 +308,6 @@
 			else
 				user.visible_message("<span class='suicide'>[user] panics and starts choking to death!</span>")
 				return OXYLOSS
-
 
 	else
 		user.visible_message("<span class='suicide'>[user] begins beating [user.p_them()]self to death with \the [src]'s handle! It probably would've been cooler if [user.p_they()] turned it on first!</span>")
@@ -452,21 +449,21 @@
 
 //spears
 /obj/item/twohanded/spear
-	icon_state = "spearglass0"
+	icon_state = "glaive0"
 	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
-	name = "improvised metal glaive"
-	desc = "A improvised metal glaive that can be wielded."
+	name = "metal glaive"
+	desc = "A metal glaive that can be wielded."
 	force = 10
 	w_class = WEIGHT_CLASS_BULKY
-	slot_flags = ITEM_SLOT_BACK
+	slot_flags = NONE
 	force_unwielded = 25
 	force_wielded = 40
 	throwforce = 5//less incentive to use it over throwing spears
 	throw_speed = 4
 	embedding = list("embedded_pain_multiplier" = 1, "embed_chance" = 10, "embedded_fall_chance" = 90)
 	armour_penetration = 0
-	materials = list(MAT_METAL=1150, MAT_GLASS=2075)
+	materials = list(MAT_METAL=1605)
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb = list("attacked", "impaled", "jabbed", "torn", "gored")
 	sharpness = IS_SHARP
@@ -503,7 +500,7 @@
 	if(explosive)
 		icon_state = "spearbomb[wielded]"
 	else
-		icon_state = "spearglass[wielded]"
+		icon_state = "glaive[wielded]"
 
 /obj/item/twohanded/spear/afterattack(atom/movable/AM, mob/user, proximity)
 	. = ..()
@@ -674,17 +671,49 @@
 		return 1
 	return 0
 
-//GREY TIDE
-/obj/item/twohanded/spear/grey_tide
+/* Glass Spears*/
+
+/obj/item/twohanded/spear/glass
 	icon_state = "spearglass0"
-	name = "\improper metal spear"
-	desc = "A improvised metal spear."
+	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
+	name = "glass tipped spear"
+	desc = "A improvised spear weapon with a edge tipped in sharp glass."
+	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
+	materials = list(MAT_METAL=1150, MAT_GLASS=2075)
 	force_unwielded = 20
 	force_wielded = 25
 	throwforce = 20
 	throw_speed = 4
 	attack_verb = list("gored")
+
+/obj/item/twohanded/spear/glass/update_icon()
+	if(explosive)
+		icon_state = "spearbomb[wielded]"
+	else
+		icon_state = "spearglass[wielded]"
+
+/obj/item/twohanded/spear/grey_tide
+	icon_state = "spearglass0"
+	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
+	name = "\improper metal spear"
+	desc = "A improvised metal spear."
+	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = ITEM_SLOT_BACK
+	materials = list(MAT_METAL=1150, MAT_GLASS=2075)
+	force_unwielded = 20
+	force_wielded = 25
+	throwforce = 20
+	throw_speed = 4
+	attack_verb = list("gored")
+
+/obj/item/twohanded/spear/grey_tide/update_icon()
+	if(explosive)
+		icon_state = "spearbomb[wielded]"
+	else
+		icon_state = "spearglass[wielded]"
 
 /obj/item/twohanded/spear/grey_tide/afterattack(atom/movable/AM, mob/living/user, proximity)
 	. = ..()
@@ -700,6 +729,27 @@
 			M.faction = user.faction.Copy()
 			M.Copy_Parent(user, 100, user.health/2.5, 12, 30)
 			M.GiveTarget(L)
+
+/obj/item/twohanded/spear/pilum
+	icon_state = "pilum0"
+	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
+	name = "pilum spear"
+	desc = "A elongated spear, used for throwing as well as thrusting."
+	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = NONE
+	force_unwielded = 18
+	force_wielded = 22
+	throwforce = 27
+	throw_speed = 4
+	armour_penetration = 2
+	attack_verb = list("gored")
+
+/obj/item/twohanded/spear/pilum/update_icon()
+	if(explosive)
+		icon_state = "spearbomb[wielded]"
+	else
+		icon_state = "pilum[wielded]"
 
 /obj/item/twohanded/pitchfork
 	icon_state = "pitchfork0"
