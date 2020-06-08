@@ -74,6 +74,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	name = "machete"
 	desc = "A makeshift machete made of a lawn mower blade."
 	icon_state = "imp_machete"
+	item_state = "imp_machete"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
 	item_state = "salvagedmachete"
@@ -81,19 +82,34 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 
 /obj/item/claymore/machete/reinforced
 	name = "reinforced machete"
-	desc = "A reinforced machete made of high quality steel."
+	desc = "A reinforced machete, the blade has been laborously sharpened into a fine killing edge."
+	icon_state = "machete"
+	item_state = "machete"
 	force = 35
 	throwforce = 25
 
 /obj/item/claymore/machete/gladius
 	name = "machete gladius"
 	desc = "A forged steel machete, the blade has been laborously sharpened and the weight has been evenly distributed for maximum killing power. An image of a bull is burned into the wooden handle."
-	icon_state = "machete"
-	item_state = "machete"
+	icon_state = "gladius"
+	item_state = "gladius"
+	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	slot_flags = ITEM_SLOT_BELT
 	force = 35
 	throwforce = 25
 	block_chance = 10
+
+/obj/item/claymore/machete/gladius/improvised
+	name = "improvised machete gladius"
+	desc = "A forged steel machete in the shape of a gladius of inferior quality. A image of a bull is etched into the rough metal handle surrounded by a cloth grip. "
+	icon_state = "imp_gladius"
+	item_state = "imp_gladius"
+	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
+	force = 30 //worse stats to incentivize finishing the weapon.
+	throwforce = 20
+	block_chance = 5
 
 /obj/item/claymore/machete/pipe
 	name = "pipe"
@@ -121,7 +137,6 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	desc = "A rusty old tire iron, normally used for loosening nuts from car tires.<br>Though it has a short reach, it has decent damage and a fast swing."
 	icon_state = "tire"
 	item_state = "tire"
-
 
 /obj/item/claymore/machete/golf
 	name = "9 iron"
@@ -290,7 +305,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 
 /obj/item/katana
 	name = "katana"
-	desc = "Woefully underpowered in D20."
+	desc = "A deadly and sleek weapon of eastern origin. It is not as brute force practical in the wasteland, but it is intimidating at least."
 	icon_state = "katana"
 	item_state = "katana"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
@@ -315,8 +330,6 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	user.visible_message("<span class='suicide'>[user] is slitting [user.p_their()] stomach open with [src]! It looks like [user.p_theyre()] trying to commit seppuku!</span>")
 	return(BRUTELOSS)
 
-
-
 /obj/item/wirerod
 	name = "wired rod"
 	desc = "A rod with some wire wrapped around the top. It'd be easy to attach something to the top bit."
@@ -331,7 +344,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 
 /obj/item/wirerod/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/shard))
-		var/obj/item/twohanded/spear/S = new /obj/item/twohanded/spear
+		var/obj/item/twohanded/spear/glass/S = new /obj/item/twohanded/spear/glass
 
 		remove_item_from_storage(user)
 		qdel(I)
@@ -353,7 +366,6 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 		user.put_in_hands(P)
 	else
 		return ..()
-
 
 /obj/item/throwing_star
 	name = "throwing star"
@@ -507,6 +519,21 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	w_class = WEIGHT_CLASS_SMALL
 	armour_penetration = 100
 	attack_verb = list("bludgeoned", "whacked", "disciplined")
+	resistance_flags = FLAMMABLE
+
+/obj/item/staff/legionstandard
+	name = "legion standard"
+	desc = "A purple standard of the legion with a image of a bull. The pole itself still servicable for bludgeoning foes who come too close to threaten the standard bearer."
+	icon_state = "legionstandard"
+	lefthand_file = 'icons/mob/inhands/weapons/staves_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/staves_righthand.dmi'
+	force = 6
+	throwforce = 5
+	throw_speed = 2
+	throw_range = 5
+	w_class = WEIGHT_CLASS_SMALL
+	armour_penetration = 100
+	attack_verb = list("bludgeoned", "whacked", "disciplined", "bonked")
 	resistance_flags = FLAMMABLE
 
 /obj/item/staff/broom
