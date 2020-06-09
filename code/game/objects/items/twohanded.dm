@@ -461,7 +461,7 @@
 	force_wielded = 40
 	throwforce = 5//less incentive to use it over throwing spears
 	throw_speed = 4
-	embedding = list("embedded_pain_multiplier" = 1, "embed_chance" = 10, "embedded_fall_chance" = 90)
+	embedding = list("embedded_pain_multiplier" = 1, "embed_chance" = 10, "embedded_fall_chance" = 90) //not for throwing.
 	armour_penetration = 0
 	materials = list(MAT_METAL=1605)
 	hitsound = 'sound/weapons/bladeslice.ogg'
@@ -686,6 +686,7 @@
 	force_wielded = 25
 	throwforce = 20
 	throw_speed = 4
+	embedding = list("embedded_pain_multiplier" = 2, "embed_chance" = 25, "embedded_fall_chance" = 95)
 	attack_verb = list("gored")
 
 /obj/item/twohanded/spear/glass/update_icon()
@@ -707,6 +708,7 @@
 	force_wielded = 25
 	throwforce = 20
 	throw_speed = 4
+	embedding = list("embedded_pain_multiplier" = 2, "embed_chance" = 25, "embedded_fall_chance" = 95)
 	attack_verb = list("gored")
 
 /obj/item/twohanded/spear/grey_tide/update_icon()
@@ -736,6 +738,7 @@
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
 	name = "pilum spear"
 	desc = "A elongated spear, used for throwing as well as thrusting."
+	embedding = list("embedded_pain_multiplier" = 2, "embed_chance" = 40, "embedded_fall_chance" = 85)
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = NONE
 	force_unwielded = 18
@@ -898,7 +901,7 @@
 	throwforce = 25
 	throwforce = 20
 	throw_speed = 4
-	embedding = list("embedded_impact_pain_multiplier" = 3)
+	embedding = list("embedded_pain_multiplier" = 2, "embed_chance" = 25, "embedded_fall_chance" = 95)
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb = list("attacked", "poked", "jabbed", "torn", "gored")
 	sharpness = IS_SHARP

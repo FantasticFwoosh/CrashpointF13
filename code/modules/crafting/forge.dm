@@ -84,7 +84,7 @@
 
 /datum/crafting_recipe/smeltmetalparts
 	name = "Smelt Metal Parts Into Sheets"
-	result = /obj/item/stack/sheet/metal/ten
+	result = /obj/item/stack/sheet/metal/five
 	time = 100
 	reqs = list(/obj/item/stack/crafting/metalparts = 1)
 	tools = list(TOOL_FORGE, TOOL_WELDER)
